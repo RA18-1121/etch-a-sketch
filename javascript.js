@@ -28,26 +28,27 @@ button.addEventListener("click", () => {
         container.removeChild(container.firstChild);
     }
     num = Number(prompt("Enter the size of the new grid (maximum - 100) - "));
-    if(num <= 100)
+    if(num > 100 || Number.isNaN(num) || num <= 0 || num % 1 !== 0)
     {
-        for(let i = 0; i < num; i++)
+        num = 16;
+    }
+    for(let i = 0; i < num; i++)
+    {
+        let row = document.createElement("div");
+        row.classList.add("row");
+        for(let j = 0; j < num; j++)
         {
-            let row = document.createElement("div");
-            row.classList.add("row");
-            for(let j = 0; j < num; j++)
-            {
-                let box = document.createElement("div");
-                box.classList.add("box");
-                box.style.width = `${1 / num * 100}%`;
-                box.style.paddingBottom = `${1 / num * 100}%`;
+            let box = document.createElement("div");
+            box.classList.add("box");
+            box.style.width = `${1 / num * 100}%`;
+            box.style.paddingBottom = `${1 / num * 100}%`;
                 
-                box.addEventListener("mouseenter", () => {
-                    box.style.backgroundColor = "blue";
-                })
+            box.addEventListener("mouseenter", () => {
+                box.style.backgroundColor = "blue";
+            })
                 
-                row.appendChild(box);
-            }
-            container.appendChild(row);
+            row.appendChild(box);
         }
+        container.appendChild(row);
     }
 })
