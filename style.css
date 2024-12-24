@@ -1,14 +1,4 @@
-*{
-    outline: 2px solid red;
-}
-
-.text{
-    position: absolute;
-}
-
 .box{
-    width: 6.25%;
-    padding-bottom: 6.25%;
     position: relative;
 }
 
@@ -19,4 +9,13 @@
 .container{
     display: flex;
     flex-direction: column;
+    outline: 2px solid red;
+}
+
+button{
+    display: flex;
+    justify-content: center;
+    margin: 32px auto;
+    background-color: yellow;
+    font-size: 32px;
 }
