@@ -13,6 +13,10 @@ for(let i = 0; i < 16; i++)
         text.textContent = "Hello";
         box.appendChild(text);
 
+        box.addEventListener("mouseenter", () => {
+            box.style.backgroundColor = "blue";
+        })
+
         row.appendChild(box);
     }
     container.appendChild(row);
