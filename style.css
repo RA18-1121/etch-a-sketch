@@ -1,0 +1,22 @@
+*{
+    outline: 2px solid red;
+}
+
+.text{
+    position: absolute;
+}
+
+.box{
+    width: 6.25%;
+    padding-bottom: 6.25%;
+    position: relative;
+}
+
+.row{
+    display: flex;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
